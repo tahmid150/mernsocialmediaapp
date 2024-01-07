@@ -1,0 +1,347 @@
+*{
+  box-sizing: border-box;
+}
+a{
+  cursor: pointer;
+}
+
+body{
+  color: black;
+}
+img{
+  max-width: 100%;
+}
+
+main{
+  padding: 10px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  align-items: center;
+}
+header a{
+  text-decoration: none;
+  color: inherit;
+}
+header a.logo{
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+header nav{
+  display: flex;
+  gap: 15px;
+}
+.wassup {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 20px;
+  animation: fadeIn 1s ease-in-out; /* Example animation */
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+div.post{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 600px){
+  div.post{
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+}
+
+div.post div.texts h2{
+  margin: 0;
+  font-size: 1.8rem;
+}
+div.post div.texts a{
+  text-decoration: none;
+  color: inherit;
+}
+
+div.post p.info{
+  margin: 6px 0;
+  color: #888;
+  font-size: .7rem;
+  font-weight: bold;
+  display: flex;
+  gap: 10px;
+}
+div.post p.info a.author{
+  color: #333;
+}
+div.post p.summary{
+  margin: 10px 0;
+  line-height: 1.1rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+form.login, form.register{
+  max-width: auto;
+  margin: 0 auto;
+}
+
+input{
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 5px 7px;
+  border: 3px solid #ddd;
+  border-radius: 5px 7px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #333;
+}
+button.regilogin{
+  margin-top: 20px;
+  border-radius: 50%;
+  width: 100%;
+  display: block;
+  background-color: #555;
+  border: 0;
+  color: #fff;
+  border-radius: 5px;
+  padding: 7px 0;
+  cursor: pointer;
+}
+button.regilogin {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #4FD1C5;
+  background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+button.regilogin::before {
+content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #00FFCB;
+  box-shadow: 0 0 60px rgba(0,255,203,.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+button.regilogin:hover, button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+button.regilogin:hover::before, button.regilogin:focus::before {
+  opacity: 1;
+}
+
+button.regilogin::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+button.regilogin:hover::after, button.regilogin:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+form.login h1, form.register h1{
+  text-align: center;
+  color: #48ff00;
+}
+
+header nav a{
+  cursor: pointer;
+}
+
+input[type="password"] {
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #333;
+}
+input[type="email"] {
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #333;
+}
+
+
+button.cp {
+  width: 100%;
+  margin-top: 20px;
+    font-size: large;
+    min-width: 300px;
+    min-height: 60px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+button.cp:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+button.cp:active {
+    color: #000
+}
+
+button.cp:active:after {
+    background: transparent;
+}
+
+button.cp:hover:before {
+    opacity: 1;
+}
+
+button.cp:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+div.post-page div.image{
+  max-height: 200px;
+  display: flex;
+  overflow: hidden;
+}
+
+div.post-page div.image img{
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+}
+
+div.post-page a{
+  color: #333;
+  text-decoration: underline; 
+}
+
+div.post-page h1{
+  text-align: center;
+  margin: 10px 0 5px;
+}
+
+div.post-page time{
+  text-align: center;
+  display: block;
+  font-size: 0.7rem;
+  color : #aaa;
+}
+div.post-page div.author{
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #aaa;
+}
+
+div.post-page div.content p{
+  line-height: 1.6rem;
+}
+
+div.edit-row{
+  text-align: center;
+  margin-bottom: 20px;
+}
+div.post-page a.edit-btn{
+  background-color: #333;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+}
+a svg{
+  height: 20px;
+}
